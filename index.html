@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bgimage">
+        <img src="../Guess_Number_Game/number.img" width="100%" alt="">
+        <div class="total">
+    
+          <h1>Guess The Number</h1>
+          <p>
+              Type a random number between 1 - 10. 
+                  
+            </p>
+        
+          <div class="form">
+              <label for="guessField">Enter a guess number: </label>
+              <input type = "text" 
+                       id = "guessField" 
+                     class = "guessField">
+              <input type = "submit" 
+                     value = "Submit guess" 
+                     class = "guessSubmit" 
+                     id = "submitguess">
+          </div>
+        
+          <script type = "text/javascript">
+        
+           
+            var y = Math.floor(Math.random() * 10 + 1);
+        
+            
+            var guess = 1;
+        
+            document.getElementById("submitguess").onclick = function(){
+              
+               
+                var x = document.getElementById("guessField").value;
+        
+                if(x == y)
+                {    
+                  alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+                        + guess + " GUESS ");
+                }
+                else if(x > y)
+                {    
+                  guess++;
+                  alert(" SORRY..TRY A SMALLER NUMBER");
+                }
+                else
+                {
+                  guess++;
+                  alert("SORRY.. TRY A GREATER NUMBER")
+                }
+            }
+          </script>
+      
+        </div>        
+    </div>
+</body>
+</html>
